@@ -1,6 +1,6 @@
-======================================
+=============================
 MapR topology for clusterdock
-======================================
+=============================
 
 This repository houses the **MapR** topology for `clusterdock`_.
 
@@ -18,7 +18,7 @@ with the ``clusterdock`` script:
 .. code-block:: console
 
     $ git clone https://github.com/clusterdock/topology_mapr.git
-    $ clusterdock start topology_mapr --namespace streamsets --node-disks='{node-1:[/dev/xvdb],node-2:[/dev/xvdc]}' --predictable --mapr-version=5.2.0
+    $ clusterdock start topology_mapr --namespace streamsets --node-disks '{node-1:[/dev/xvdb],node-2:[/dev/xvdc]}' --predictable --mapr-version 5.2.2 --mep-version 3.0.1
 
 To see full usage instructions for the ``start`` action, use ``-h``/``--help``:                                                 
 
@@ -52,7 +52,8 @@ To see full usage instructions for the ``start`` action, use ``-h``/``--help``:
       -h, --help            show this help message and exit
     
     MapR arguments:
-      --mapr-version ver    MapR version to use (default: 6.0.0)
+      --mapr-version ver    MapR version to use (default: 5.2.0)
+      --mep-version ver     MEP version to use (default: None)
       --node-disks map      Map of node names to block devices (default: None)
       --predictable         If specified, attempt to expose container ports to the
                             same port number on the host (default: False)
